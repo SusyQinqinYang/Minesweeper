@@ -121,7 +121,9 @@ export const GlobalProvider = ({ children }) => {
                     if (r1 > 0 && c1 < newMineBoard[r1].length - 1 && newMineBoard[r1 - 1][c1 + 1] === "💣") sum++;
                     if (r1 < newMineBoard.length - 1 && c1 > 0 && newMineBoard[r1 + 1][c1 - 1] === "💣") sum++;
 
-                    newMineBoard[r1].splice(c1, 1, sum);
+                    if (sum !== 0) {
+                        newMineBoard[r1].splice(c1, 1, sum);
+                    }
                 }
             }
         }
