@@ -1,10 +1,10 @@
 import React, { useState, useContext,  } from 'react';
 import ReactDOM from 'react-dom';
-import { GlobalProvider, GlobalContext } from './context/GlobalState.jsx'
-// import SquareEntry from './components/SquareEntry.jsx';
+//don't use useContext in App, otherwise it won't render when state gets updated.
+import { GlobalProvider } from './context/GlobalState.jsx'
 import Board from './components/Board.jsx'
 import Modal from './components/Modal.jsx'
-
+import Restart from './components/Restart.jsx'
 
 const App = (props) => {
     // const { initBoard, mineBoard } = useContext(GlobalContext);
@@ -12,9 +12,10 @@ const App = (props) => {
     return (
         <GlobalProvider>
             <div className="App">
-                <h1>Minesweeper</h1>
+                <header>Minesweeper</header>
+                <Restart />
                 <Board />
-                <Modal/>
+                <Modal />
             </div>
         </GlobalProvider>
     )

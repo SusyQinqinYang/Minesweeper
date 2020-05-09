@@ -1,30 +1,56 @@
+
+/*===========================================
+              Customized Part
+===========================================*/
+
+header {
+    margin: 0 0 15px 0;
+    padding-top: 30px;
+    height: 70px;
+    background: rgb(107, 112, 112);
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    /* color:#a7d0f0; */
+    color:#4a8f8f;
+    /* background-size: cover; */
+    /* opacity: 0.5 */
+    background-image: url('./assets/header.jpg')
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background: rgb(212, 221, 221);
+    background-image: url('./assets/body.png');
 }
 
+/*===========================================
+              Board
+===========================================*/
 /* https://stackoverflow.com/questions/11243075/css-scale-height-to-match-width-possibly-with-a-formfactor */
 .board {
-    width: 45%;
-    height: 45vw;
-    height: calc(45vw * 1);
+    width: 40%;
+    height: calc(40vw * 1);
     margin: auto;
     /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
+    /* text-align: center; */
 }
 
 .square {
-    width: 9.52%;
-    height: calc(4.25vw * 1);;
+    width: 9.3%;
+    height: calc(3.7vw * 1);;
     border: 1px solid grey;
-    background:#dbebf7;
+    background:#a7d0f0;
     display:inline-block;
 }
 
 .square:hover {
-    background: lightblue;
+    background: rgb(97, 171, 203);
     cursor: pointer;
 } 
 
@@ -32,10 +58,36 @@ body {
     text-align: center;
     font-size:20px;
     font-weight: bold;
-    color: #538fbe;
+    color: #38709b;
+    color: #204560;
 }
 
-/* The Modal (background) */
+/*===========================================
+              Button
+===========================================*/
+
+.restart {
+    margin: 15px auto 5px auto;
+    text-align: center;
+}
+.btn {
+    background: #4a8f8f; 
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(197, 200, 202);
+    font-family: sans-serif;
+    /* margin: 15px ; */
+}
+
+.btn:hover {
+    background: rgb(13, 114, 157);
+    cursor: pointer;
+}
+/*===========================================
+              Modal
+===========================================*/
 .modal {
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -54,9 +106,12 @@ body {
   .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #888;
     width: 80%;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
   }
   
   /* The Close Button */
@@ -73,3 +128,4 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+

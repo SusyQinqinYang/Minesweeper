@@ -41,7 +41,7 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
-    //Action
+    //Actions
     function updateStateBasedOnClick(indRow, indCol) {
         if (state.mineBoard[indRow][indCol] === "💣") {
             dispatch({

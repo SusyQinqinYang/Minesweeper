@@ -12,14 +12,14 @@ const Modal = () => {
                 <div className="modal-content">
                     <span className="close" onClick={()=>closeModal()}>&times;</span>
                     <p>⛏️Supper Minesweeper⛏️ <br/>💥Next Round?💥 </p>
-                    <button onClick={()=>reStart()}>Let's Go!</button>
+                    <button className='btn restartModel' onClick={()=>reStart()}>Let's Go!</button>
                 </div>
             </div> : ''}
             {gameOver ? <div id="myModal" className="modal">
                 <div className="modal-content">
                     <span className="close" onClick={()=>closeModal()}>&times;</span>
                     <p>⛏️Dear Minesweeper: Practice makes perfect⛏️ <br/>💥Next Round?💥 </p>
-                    <button onClick={()=>reStart()}>Let's Go!</button>
+                    <button className='btn restartModel' onClick={()=>reStart()}>Let's Go!</button>
                 </div>
             </div> : ''}
         </div>
